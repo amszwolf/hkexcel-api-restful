@@ -42,82 +42,36 @@ public class SchoolController {
 	
 	public SchoolController() {
 		responseHeaders.set("Access-Control-Expose-Headers", "Content-Range");
-		//this.mapper.configure(SerializationFeature.WRAP_ROOT_VALUE, true);
-		//this.mapper.configure(DeserializationFeature.UNWRAP_ROOT_VALUE, true);
 	}
 	
 	@GetMapping(value = "")
 	public List<School> listAllSchools()
 	{
-	return schoolRepository.findAll();
+		return schoolRepository.findAll();
 	}
 	
-	//http://localhost:8080/schools?filter={"schoolCodes"=["CDNIS","LGS","KGS"]}
 	//https://stackoverflow.com/questions/21577782/json-parameter-in-spring-mvc-controller/21689084#21689084
-	@GetMapping(value = "", params = "filter" , produces = 	MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<String> findManyBySchoolCode( String[] filter1, String filter) throws JsonMappingException, JsonParseException, IOException
-	{
-		School school = mapper.readValue(filter, School.class);
-		
-		String result;
-		
-		int total;
-		try {
-			List<School> schools = schoolRepository.findByIdIn(filter1);
-			
-			result = mapper.writer().withRootName("data").writeValueAsString(schools);
-			JsonNode jsonNode = mapper.readTree(result);
-			total = schools.size(); 
-			
-			//append "total":numeric property to the end of json
-			((ObjectNode) jsonNode).put("total", total);
-			//https://stackoverflow.com/questions/23271699/adding-property-to-json-using-jackson
-			//JsonNode elem0 = ((ArrayNode) jsonNode).get(0);
-			//((ObjectNode) elem0).put("total", total);
-			result = mapper.writer().withRootName("").writeValueAsString(jsonNode); 
-			
-		} catch (/*JsonProcessingException |*/ IOException e) {
-			result = e.getMessage();
-		}
-	return ResponseEntity.ok()
-			.body(result);
-	}
-	
 	@GetMapping(value = "", params = {"filter", "sort", "range"}, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> getListSchools(String filter, String sort, String range) throws JsonMappingException, JsonParseException, IOException
 	{
 		School school = mapper.readValue(filter, School.class);
 		List<School> schools = new ArrayList<School>();
 		String result;	
-		String sortArray[] = sort.replace("[", "").replace("]", "").replace("\"", "").split(",");
-		int[] rangeArray = Stream.of(range.replace("[", "").replace("]", "").split(","))
-				.mapToInt(Integer::parseInt)
-				.toArray();
+		String sortArray[] = convertQueryArrayToStringArray(sort);
+		int[] rangeArray = convertQueryArrayToIntArray(range);
 		int total = 0;
 		try {
 			total = schoolRepository.findAll().size();
-			schools = schoolRepository.getListOfSchools(school, sortArray, rangeArray);
-			//schools = schoolRepository.findBySchoolCodeIn(new String[] {school.getSchoolCode()});
-
-			/*result = mapper.writer().withRootName("data").writeValueAsString(schools);
-			JsonNode jsonNode = mapper.readTree(result);
-			//append "total":numeric property to the end of json
-			((ObjectNode) jsonNode).put("total", total);
-			
-			//https://stackoverflow.com/questions/23271699/adding-property-to-json-using-jackson
-				//JsonNode elem0 = ((ArrayNode) jsonNode).get(0);
-				//((ObjectNode) elem0).put("total", total);
-			result = mapper.writer().withRootName("").writeValueAsString(jsonNode);*/
-			
+			schools = schoolRepository.getListOfSchools(school, sortArray, rangeArray);			
 			result = mapper.writeValueAsString(schools);
 			
-		} catch (/*JsonProcessingException |*/ IOException e) {
+		} catch (IOException e) {
 			result = e.getMessage();
 		}
 		responseHeaders.set("Content-Range", String.format("schools 0-%d/%d", rangeArray[1], total)); //"schools 0-24/319"
-	return ResponseEntity.ok()
-			.headers(responseHeaders)
-			.body(result);
+		return ResponseEntity.ok()
+				.headers(responseHeaders)
+				.body(result);
 	}
 	
 	/*@GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -143,19 +97,31 @@ public class SchoolController {
 	
 	@PutMapping("/{id}")
 	School replaceSchool(@RequestBody School newSchool, @PathVariable String id) {
-		
-		return schoolRepository.findById(id)
-				.map(school -> {
-					school.setFullName(newSchool.getFullName());
-					school.setId(newSchool.get_id());
-					school.setAddress(newSchool.getAddress());
-					return schoolRepository.updateOneSchoolById(school);
-				})
-				.orElseGet(() -> {
-					newSchool.setId(id);
-					return schoolRepository.updateOneSchoolById(newSchool);
-				});
+		return schoolRepository.updateOneSchoolById(newSchool);
 	}
+	
+	private String[] convertQueryArrayToStringArray(String queryArray) {
+		try {
+			return queryArray.replace("[", "").replace("]", "").replace("\"", "").split(",");
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		return null;
+	}
+	
+	private int[] convertQueryArrayToIntArray(String queryArray) {
+		try {
+			return Stream.of(queryArray.replace("[", "").replace("]", "").split(","))
+					.mapToInt(Integer::parseInt)
+					.toArray();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		return null;
+	}
+	
+	
+	
 }
 
 
