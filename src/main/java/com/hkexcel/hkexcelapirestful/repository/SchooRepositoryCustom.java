@@ -7,6 +7,7 @@ import com.hkexcel.hkexcelapirestful.model.School;
 
 public interface SchooRepositoryCustom {
 
-	School updateOneSchoolBySchoolCode(School school);
+	School updateOneSchoolById(School school);
+	List<School> getListOfSchools(School school, String[] sort, int[] range);
 	
 }

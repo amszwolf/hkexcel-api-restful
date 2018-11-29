@@ -1,28 +1,135 @@
 {
-"schoolCode": "DBS",
-"fullname": "Discovery Bay School",
-"country": "HK",
-"city": "Hong Kong",
-"address": "CausewayBay"
+"school_id": "DBS",
+"fullName": "Discovery Bay School",
+"address": {
+	"streetHouse": "Causeway", 
+	"country":"Hong Kong",
+	"city": "Hong Kong"
+	}
 }
 {
-"schoolCode": "KGS",
-"fullname": "Kings Graden School",
-"country": "HK",
-"city": "Hong Kong",
-"address": "MongKok"
+"school_id": "KGS",
+"fullName": "Kings Graden School",
+"address": {
+	"streetHouse": "Mongkok", 
+	"country":"Hong Kong",
+	"city": "Hong Kong"
+	}
 }
 {
-"schoolCode": "LGS",
-"fullname": "Lahore Grammer School",
-"country": "HK",
-"city": "Hong Kong",
-"address": "Jordan"
+"school_id": "LGS",
+"fullName": "Lahore Grammer School",
+"address": {
+	"streetHouse": "DahiWala", 
+	"country":"Pakistan",
+	"city": "Lahore"
+	}
 }
 {
-"schoolCode": "CDNIS",
-"fullname": "Canadian International School",
-"country": "HK",
-"city": "Hong Kong",
-"address": "West Island"
+"school_id": "CDNIS",
+"fullName": "Canadian International School",
+"address": {
+	"streetHouse": "West Island", 
+	"country":"Hong Kong",
+	"city": "Hong Kong"
+	}
+}
+{
+"school_id": "BMIA",
+"fullName": "Beacon House School System Margalla Campus",
+"address": {
+	"streetHouse": "H-8 Sector", 
+	"country":"Pakistan",
+	"city": "Islamabad"
+	}
+}
+{
+"school_id": "BMIAB",
+"fullName": "Beacon House School System Margalla Campus",
+"address": {
+	"streetHouse": "H-8 Sector", 
+	"country":"Pakistan",
+	"city": "Islamabad"
+	}
+}
+{
+"school_id": "BMIAC",
+"fullName": "Beacon House School System Margalla Campus",
+"address": {
+	"streetHouse": "H-8 Sector", 
+	"country":"Pakistan",
+	"city": "Islamabad"
+	}
+}
+{
+"school_id": "BMID",
+"fullName": "Beacon House School System Margalla Campus",
+"address": {
+	"streetHouse": "H-8 Sector", 
+	"country":"Pakistan",
+	"city": "Islamabad"
+	}
+}
+{
+"school_id": "BMIE",
+"fullName": "Beacon House School System Margalla Campus",
+"address": {
+	"streetHouse": "H-8 Sector", 
+	"country":"Pakistan",
+	"city": "Islamabad"
+	}
+}
+{
+"school_id": "BMIF",
+"fullName": "Beacon House School System Margalla Campus",
+"address": {
+	"streetHouse": "H-8 Sector", 
+	"country":"Pakistan",
+	"city": "Islamabad"
+	}
+}
+{
+"school_id": "BMIG",
+"fullName": "Beacon House School System Margalla Campus",
+"address": {
+	"streetHouse": "H-8 Sector", 
+	"country":"Pakistan",
+	"city": "Islamabad"
+	}
+}
+{
+"school_id": "BMIH",
+"fullName": "Beacon House School System Margalla Campus",
+"address": {
+	"streetHouse": "H-8 Sector", 
+	"country":"Pakistan",
+	"city": "Islamabad"
+	}
+}
+{
+"school_id": "BMII",
+"fullName": "Beacon House School System Margalla Campus",
+"address": {
+	"streetHouse": "H-8 Sector", 
+	"country":"Pakistan",
+	"city": "Islamabad"
+	}
+}
+{
+"school_id": "BMIJ",
+"fullName": "Beacon House School System Margalla Campus",
+"address": {
+	"streetHouse": "H-8 Sector", 
+	"country":"Pakistan",
+	"city": "Islamabad"
+	}
+}
+{
+"school_id": "BMIK",
+"fullName": "Beacon House School System Margalla Campus",
+"address": {
+	"streetHouse": "H-8 Sector", 
+	"country":"Pakistan",
+	"city": "Islamabad"
+	}
 }

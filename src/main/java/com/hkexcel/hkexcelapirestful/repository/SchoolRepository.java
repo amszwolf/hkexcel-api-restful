@@ -10,9 +10,11 @@ import com.hkexcel.hkexcelapirestful.model.School;
 @Repository
 public interface SchoolRepository extends MongoRepository<School, String>, SchooRepositoryCustom{
 
-	School findOneBySchoolCode(@Param("schoolCode") String schoolCode);
+	School findOneSchoolById(String id);
 	
 	//@Query("{ 'firstname' : ?0 }")
-	List<School> findBySchoolCodeIn(String[] schoolCodes);
+	List<School> findByIdIn(String[] Ids);
+	
+	void deleteOneById(String id);
 	
 }
