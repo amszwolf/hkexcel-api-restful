@@ -66,7 +66,7 @@ public class SchoolRepositoryImpl implements SchooRepositoryCustom{
 		}
 		if(!StringUtils.isEmpty(school.getAddress())){
 			if(!StringUtils.isEmpty(school.getAddress().getCountry())) {
-				query.addCriteria(Criteria.where("address.country").is(school.getAddress().getCountry()));
+				query.addCriteria(Criteria.where("address.country").regex(Pattern.compile(Pattern.quote(school.getAddress().getCountry()), Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE)));
 			}
 			if(!StringUtils.isEmpty(school.getAddress().getCity())) {
 				query.addCriteria(Criteria.where("address.city").is(school.getAddress().getCity()));

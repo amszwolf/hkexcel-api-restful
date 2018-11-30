@@ -2,138 +2,152 @@
 	"id": "DBS",
 	"fullName": "Discovery Bay School",
 	"address": {
-		"streetHouse": "Causeway",
+		"streetHouse": "A-12, Block A, 394 Mike Spencer Street, Lantau Island",
 		"country": "Hong Kong",
-		"city": "Hong Kong"
+		"city": "Hong Kong",
+		"zipCode": 0000
 	}
 } {
 	"id": "KGS",
 	"fullName": "Kings Graden School",
 	"address": {
-		"streetHouse": "Mongkok",
+		"streetHouse": "Fairmont Building, 256 Nathan Road, Mongkok",
 		"country": "Hong Kong",
-		"city": "Hong Kong"
+		"city": "Hong Kong",
+		"zipCode": 0000
 	}
 } {
 	"id": "LGS",
 	"fullName": "Lahore Grammer School",
 	"address": {
-		"streetHouse": "DahiWala",
+		"streetHouse": "DahiWala House, 25th Avenue Street, Lahore",
 		"country": "Pakistan",
-		"city": "Lahore"
+		"city": "Lahore",
+		"zipCode": 53720
 	}
 } {
 	"id": "CDNIS",
-	"fullName": "Canadian International School",
+	"fullName": "Canadian International School of Hong Kong",
 	"address": {
-		"streetHouse": "West Island",
+		"streetHouse": "36 Nam Long Shan Road, Jordan",
 		"country": "Hong Kong",
-		"city": "Hong Kong"
+		"city": "Hong Kong",
+		"zipCode": 0000
 	}
 } {
-	"id": "BMIA",
+	"id": "BMI-A",
 	"fullName": "Beacon House School System Margalla Campus",
 	"address": {
-		"streetHouse": "H-8 Sector",
+		"streetHouse": "Building A, H-8 Sector, Margalla Street",
 		"country": "Pakistan",
-		"city": "Islamabad"
-	}
-} {
-	"id": "BMIAB",
-	"fullName": "Beacon House School System Margalla Campus",
-	"address": {
-		"streetHouse": "H-8 Sector",
-		"country": "Pakistan",
-		"city": "Islamabad"
-	}
-} {
-	"id": "BMIAC",
-	"fullName": "Beacon House School System Margalla Campus",
-	"address": {
-		"streetHouse": "H-8 Sector",
-		"country": "Pakistan",
-		"city": "Islamabad"
-	}
-} {
-	"id": "BMID",
-	"fullName": "Beacon House School System Margalla Campus",
-	"address": {
-		"streetHouse": "H-8 Sector",
-		"country": "Pakistan",
-		"city": "Islamabad"
-	}
-} {
-	"id": "BMIE",
-	"fullName": "Beacon House School System Margalla Campus",
-	"address": {
-		"streetHouse": "H-8 Sector",
-		"country": "Pakistan",
-		"city": "Islamabad"
-	}
-} {
-	"id": "BMIF",
-	"fullName": "Beacon House School System Margalla Campus",
-	"address": {
-		"streetHouse": "H-8 Sector",
-		"country": "Pakistan",
-		"city": "Islamabad"
-	}
-} {
-	"id": "BMIG",
-	"fullName": "Beacon House School System Margalla Campus",
-	"address": {
-		"streetHouse": "H-8 Sector",
-		"country": "Pakistan",
-		"city": "Islamabad"
-	}
-} {
-	"id": "BMIH",
-	"fullName": "Beacon House School System Margalla Campus",
-	"address": {
-		"streetHouse": "H-8 Sector",
-		"country": "Pakistan",
-		"city": "Islamabad"
-	}
-} {
-	"id": "BMII",
-	"fullName": "Beacon House School System Margalla Campus",
-	"address": {
-		"streetHouse": "H-8 Sector",
-		"country": "Pakistan",
-		"city": "Islamabad"
-	}
-} {
-	"id": "BMIJ",
-	"fullName": "Beacon House School System Margalla Campus",
-	"address": {
-		"streetHouse": "H-8 Sector",
-		"country": "Pakistan",
-		"city": "Islamabad"
-	}
-} {
-	"id": "BMIK",
-	"fullName": "Beacon House School System Margalla Campus",
-	"address": {
-		"streetHouse": "H-8 Sector",
-		"country": "Pakistan",
-		"city": "Islamabad"
+		"city": "Islamabad",
+		"zipCode": 56987
 	}
 } {
 	"id": "AIS",
 	"fullName": "Australian International School",
 	"address": {
-		"streetHouse": "Prince Edward",
+		"streetHouse": "22/F, Jardine Building, Prince Edward",
 		"country": "Hong Kong",
 		"city": "Hong Kong",
-		"zipCode": "432532"
+		"zipCode": 43253
+	}
+} {
+	"id": "CIS",
+	"fullName": "Chinese International School",
+	"address": {
+		"streetHouse": "Liberty Building, 56-78 Han Yuen Path",
+		"country": "China",
+		"city": "Shanghai",
+		"zipCode": 43253
 	}
 }{
-	"id": "CIS",
-	"fullName": "Chinease International School",
+	"id": "VSA",
+	"fullName": "Victoria Shanghai Academy",
 	"address": {
-		"city": "Shanghai",
+		"streetHouse": "19 Shum Wan Road, Tsim Sha Tsui",
+		"country": "Hong Kong",
+		"city": "Hong Kong",
+		"zipCode": 0000
+	}
+}
+{
+	"id": "AMIS",
+	"fullName": "American International School",
+	"address": {
+		"streetHouse": "125 Waterloo Road, Central",
+		"country": "Hong Kong",
+		"city": "Hong Kong",
+		"zipCode": 0000
+	}
+}
+{
+	"id": "DIBS",
+	"fullName": "Diocesan Boy's School",
+	"address": {
+		"streetHouse": "131, Argyle Street, Mongkok",
+		"country": "Hong Kong",
+		"city": "Hong Kong",
+		"zipCode": 0000
+	}
+}
+{
+	"id": "ESF-IS",
+	"fullName": "ESF Island School",
+	"address": {
+		"streetHouse": "25/F 1063 King's Road",
+		"country": "Hong Kong",
+		"city": "Hong Kong",
+		"zipCode": 0000
+	}
+}
+{
+	"id": "ESF-DC",
+	"fullName": "ESF Discovery College",
+	"address": {
+		"streetHouse": "38 Seina Ave",
+		"country": "Hong Kong",
+		"city": "Hong Kong",
+		"zipCode": 0000
+	}
+}
+{
+	"id": "HHS",
+	"fullName": "Highgate House School",
+	"address": {
+		"streetHouse": "100 Peak Road",
+		"country": "Hong Kong",
+		"city": "Hong Kong",
+		"zipCode": 0000
+	}
+}
+{
+	"id": "FIS",
+	"fullName": "French International School",
+	"address": {
+		"streetHouse": "165 Blue Pool Road, Happy Valley",
+		"country": "Hong Kong",
+		"city": "Hong Kong",
+		"zipCode": 0000
+	}
+}
+{
+	"id": "SIS",
+	"fullName": "Singapore International School",
+	"address": {
+		"streetHouse": "23 Nam Long Shan Road",
+		"country": "Hong Kong",
+		"city": "Hong Kong",
+		"zipCode": 0000
+	}
+}
+{
+	"id": "KIS",
+	"fullName": "korean International School",
+	"address": {
+		"streetHouse": "55 Lei King Road, Sai Wan Ho",
 		"country": "China",
-		"streetHouse": "where ever this is",
-		"zipCode": "6654"
+		"city": "Beijing",
+		"zipCode": 58964
 	}
 }
