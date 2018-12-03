@@ -15,6 +15,8 @@ public interface SchoolRepository extends MongoRepository<School, String>, Schoo
 	//@Query("{ 'firstname' : ?0 }")
 	List<School> findByIdIn(String[] Ids);
 	
+	List<School> findAll();
+	
 	void deleteOneById(String id);
 	
 }

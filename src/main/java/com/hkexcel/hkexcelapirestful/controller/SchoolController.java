@@ -30,7 +30,8 @@ import com.hkexcel.hkexcelapirestful.service.SchoolService;
 
 @RestController
 @RequestMapping(value = "/api/v1/schools")
-@CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin
 public class SchoolController {
 	
 	@Autowired
@@ -45,7 +46,7 @@ public class SchoolController {
 	}
 	
 	@GetMapping(value = "")
-	public List<School> listAllSchools()
+	public List<School> getAllSchools()
 	{
 		return schoolRepository.findAll();
 	}
@@ -81,7 +82,7 @@ public class SchoolController {
 	}*/
 	
 	@GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-	School findById(@PathVariable String id) {
+	School getSchoolById(@PathVariable String id) {
 		return schoolRepository.findOneSchoolById(id);
 	}
 	
